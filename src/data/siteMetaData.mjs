@@ -1,0 +1,18 @@
+export const siteMetadata = {
+  title: "Abhay Chauhan portfolio",
+  author: "Abhay Chauhan",
+  headerTitle: "Abhay Chauhan",
+  description: "Full Stack developer",
+  language: "en-us",
+  theme: "light",
+  siteName: "abhaydev.vercel.app",
+  siteUrl: "https://abhaydev.vercel.app",
+  siteRepo: "https://github.com",
+  siteLogo: "/favicon.ico",
+  socialBanner: "/static/homepage.png",
+  email: "chauhanabhay.chauhan2@gmail.com",
+  github: "https://github.com/belikeabhayx",
+  twitter: "https://x.com/belikeabhayx",
+  linkedin: "https://www.linkedin.com/in/belikeabhayx",
+  locale: "en-US",
+};
