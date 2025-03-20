@@ -4,8 +4,10 @@ import { Montserrat } from "next/font/google";
 import { classNames } from "@/utility/classNames";
 import Navbar from "@/layout/Navbar/Navbar";
 import { routes } from "@/data/navigationRoutes";
+import { useTheme } from "next-themes";
+import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
@@ -16,13 +18,21 @@ type MainLayoutProps = {
 };
 
 export default function MainLayout(props: MainLayoutProps) {
+  const { theme } = useTheme();
+
   return (
     <>
       <div className={classNames("min-h-screen", montserrat.className)}>
-        <Navbar routes={routes} />
-        <main>{props.children}</main>
-        <Footer />
+        {theme === "light" && <Navbar routes={routes} />}
+        <main>
+          <CursorTrailCanvas
+            color="hsla(183, 64%, 27%, 0.4)"
+            className="pointer-events-none fixed inset-0 z-10 h-full w-full"
+          />
+          {props.children}
+        </main>
       </div>
+      {/* <Footer /> */}
     </>
   );
 }

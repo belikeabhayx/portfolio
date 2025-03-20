@@ -4,6 +4,8 @@ import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Hero from "@/components/Hero";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import DarkHero from "@/components/DarkHero/DarkHero";
+import { useTheme } from "next-themes";
 
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
 const Project = dynamic(() => import("@/components/ProjectShowcase"), {
@@ -11,11 +13,13 @@ const Project = dynamic(() => import("@/components/ProjectShowcase"), {
 });
 
 export default function Home() {
+  const { theme } = useTheme();
+
   return (
     <>
       <CursorTrailCanvas
         color="hsla(183, 64%, 27%, 0.4)"
-        className="pointer-events-none fixed inset-0 -z-10 h-full w-full"
+        className="pointer-events-none fixed inset-0 z-10 h-full w-full"
       />
       <NextSeo
         title="About Abhay Chauhan | Full Stack Developer"
@@ -40,7 +44,7 @@ export default function Home() {
           },
         ]}
       />
-      <Hero />
+      {theme === "dark" ? <DarkHero /> : <Hero />}
       <Skills />
       <Project projects={PROJECT_SHOWCASE} />
     </>

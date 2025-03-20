@@ -7,10 +7,16 @@ import ShowCaseList from "@/components/ShowCaseList";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import { EXPERIENCE } from "@/data/experience";
+import Navbar from "@/layout/Navbar/Navbar";
+import { routes } from "@/data/navigationRoutes";
+import { useTheme } from "next-themes";
 
 export default function About() {
+  const { theme } = useTheme();
+
   return (
     <>
+      {theme === "dark" && <Navbar routes={routes} />}
       <NextSeo
         title="About Abhay Chauhan | Full Stack Developer"
         description="Learn more about Abhay Chauhan, a dedicated Full Stack Developer with 2 years of experience, I humbly invite you to explore the journey, skills, and passion that fuel my commitment to crafting innovative and user-friendly web solutions."

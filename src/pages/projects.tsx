@@ -2,10 +2,16 @@ import { NextSeo } from "next-seo";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { useTheme } from "next-themes";
+import { routes } from "@/data/navigationRoutes";
+import Navbar from "@/layout/Navbar/Navbar";
 
 export default function Projects() {
+  const { theme } = useTheme();
+
   return (
     <>
+      {theme === "dark" && <Navbar routes={routes} />}
       <NextSeo
         title="About Abhay Chauhan | Full Stack Developer"
         description="Discover a collection of projects curated by Abhay Chauhan, , a seasoned Full Stack Developer. From innovative web applications to responsive interfaces, explore the breadth and diversity of my work."
