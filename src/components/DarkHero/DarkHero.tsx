@@ -66,7 +66,7 @@ const DarkHero = () => {
         </div>
 
         {/* Enhanced Designer & Developer section */}
-        <div className="relative w-full mb-36">
+        <div className="relative mb-36 w-full">
           <div className="flex flex-col items-end space-y-2">
             <div className="cursor-default text-xs font-light uppercase tracking-widest text-white/60 transition-colors hover:text-white/80 sm:text-sm">
               DESIGNER & DEVELOPER
