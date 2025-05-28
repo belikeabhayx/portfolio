@@ -8,6 +8,7 @@ module.exports = {
         tera: {
           500: "#156064",
         },
+        primary: "#0EA5E9",
       },
       screens: {
         xs: "360px",

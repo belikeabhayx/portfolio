@@ -6,6 +6,8 @@ import { PROJECT_SHOWCASE } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import DarkHero from "@/components/DarkHero/DarkHero";
 import { useTheme } from "next-themes";
+import ProjectGrid from "@/components/project/ProjectGrid";
+
 
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
 const Project = dynamic(() => import("@/components/ProjectShowcase"), {
@@ -46,7 +48,8 @@ export default function Home() {
       />
       {theme === "dark" ? <DarkHero /> : <Hero />}
       <Skills />
-      <Project projects={PROJECT_SHOWCASE} />
+      {/* <Project projects={PROJECT_SHOWCASE} /> */}
+      <ProjectGrid />
     </>
   );
 }
