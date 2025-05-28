@@ -15,7 +15,6 @@ export type Project = {
   role: string;
   demoUrl?: string;
   repoUrl?: string;
-  year: number;
 };
 
 export const technologies: Record<string, Technology> = {
@@ -44,10 +43,9 @@ export const projects: Project[] = [
     title: "Province Immigration",
     description:
       "A full-featured e-commerce platform with dynamic product listings, cart functionality, and secure checkout process.",
-    thumbnailUrl:
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    thumbnailUrl: "/projects/province/pro-im.png",
     images: [
-      "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/projects/province/pro-im.png",
       "https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
@@ -74,17 +72,15 @@ export const projects: Project[] = [
     role: "Full-stack Developer",
     demoUrl: "https://example.com/demo",
     repoUrl: "https://github.com/example/e-commerce",
-    year: 2023,
   },
   {
-    id: "task-management",
-    title: "Task Management App",
+    id: "accountingWebApp",
+    title: "Accounting Web App",
     description:
       "A collaborative task management application with real-time updates, team assignments, and progress tracking.",
-    thumbnailUrl:
-      "https://images.pexels.com/photos/5717414/pexels-photo-5717414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    thumbnailUrl: "/projects/accounting/accounting-home.png",
     images: [
-      "https://images.pexels.com/photos/5717414/pexels-photo-5717414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/projects/accounting/accounting-home.png",
       "https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
@@ -109,7 +105,6 @@ export const projects: Project[] = [
     role: "Front-end Developer & UI Designer",
     demoUrl: "https://example.com/task-demo",
     repoUrl: "https://github.com/example/task-manager",
-    year: 2023,
   },
   {
     id: "ai-content-generator",
@@ -144,7 +139,6 @@ export const projects: Project[] = [
     role: "Full-stack Developer & AI Integration Specialist",
     demoUrl: "https://example.com/ai-generator",
     repoUrl: "https://github.com/example/ai-content-gen",
-    year: 2024,
   },
   {
     id: "mobile-fitness-app",
@@ -179,6 +173,5 @@ export const projects: Project[] = [
     role: "Mobile App Developer",
     demoUrl: "https://example.com/fitness-app",
     repoUrl: "https://github.com/example/fitness-app",
-    year: 2022,
   },
 ];

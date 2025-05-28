@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { Project } from "./project";
+import { Project } from "../../pages/projects/project";
 import TechBadge from "./TechBadge";
 
 interface ProjectCardProps {
@@ -26,11 +26,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             alt={project.title}
             className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute bottom-4 left-4 z-20">
-            <span className="bg-background/80 text-foreground inline-block rounded px-2 py-1 text-sm backdrop-blur-sm">
-              {project.year}
-            </span>
-          </div>
+          
         </div>
 
         <div className="p-6">

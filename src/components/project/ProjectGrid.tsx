@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import SectionHeading from "./SectionHeading";
-import { projects } from "./project";
-
+import { projects } from "../../pages/projects/project";
 
 const ProjectGrid = () => {
-
   return (
     <section id="projects" className="section">
       <div className="container mx-auto">

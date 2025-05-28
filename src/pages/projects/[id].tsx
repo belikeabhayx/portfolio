@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import TechBadge from "@/components/project/TechBadge";
 import PageTransition from "@/components/project/PageTransition";
-import { projects } from "@/components/project/project";
+import { projects } from "@/pages/projects/project";
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
@@ -20,7 +20,10 @@ const ProjectDetail = () => {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center">
         <h1 className="mb-4 text-2xl font-bold">Project not found</h1>
-        <Link href="/" className="inline-flex items-center rounded-lg bg-teal-600 px-4 py-2 font-medium text-white transition-colors hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600">
+        <Link
+          href="/"
+          className="inline-flex items-center rounded-lg bg-teal-600 px-4 py-2 font-medium text-white transition-colors hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600"
+        >
           Back to Home
         </Link>
       </div>
@@ -50,10 +53,10 @@ const ProjectDetail = () => {
         }}
       />
       <PageTransition>
-        <div className="pb-16 pt-24">
+        <div className="pb-16">
           {/* Hero Section */}
-          <div className="relative mb-12 h-[50vh] overflow-hidden md:h-[60vh]">
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-white via-transparent to-white dark:from-zinc-900 dark:to-zinc-900"></div>
+          <div className="relative mb-12 h-[50vh] overflow-hidden md:h-[70vh]">
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-background via-transparent to-background"></div>
             <img
               src={project.images[activeImage]}
               alt={project.title}
@@ -72,7 +75,7 @@ const ProjectDetail = () => {
             <div className="absolute bottom-8 left-0 right-0 z-20">
               <div className="container">
                 <Link
-                  href="/#projects"
+                  href="/"
                   className="flex items-center text-zinc-800/80 transition-colors hover:text-zinc-900 dark:text-zinc-200/80 dark:hover:text-zinc-100"
                 >
                   <ArrowLeft size={16} className="mr-2" />
@@ -109,7 +112,9 @@ const ProjectDetail = () => {
                     {project.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <span className="mr-2 text-primary">▹</span>
-                        <span className="text-zinc-600 dark:text-zinc-400">{feature}</span>
+                        <span className="text-zinc-600 dark:text-zinc-400">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -157,13 +162,9 @@ const ProjectDetail = () => {
                       <h4 className="mb-1 text-sm text-zinc-500 dark:text-zinc-400">
                         My Role
                       </h4>
-                      <p className="text-zinc-900 dark:text-zinc-100">{project.role}</p>
-                    </div>
-                    <div>
-                      <h4 className="mb-1 text-sm text-zinc-500 dark:text-zinc-400">
-                        Year
-                      </h4>
-                      <p className="text-zinc-900 dark:text-zinc-100">{project.year}</p>
+                      <p className="text-zinc-900 dark:text-zinc-100">
+                        {project.role}
+                      </p>
                     </div>
                     <div>
                       <h4 className="mb-2 text-sm text-zinc-500 dark:text-zinc-400">
