@@ -40,8 +40,8 @@ export const technologies: Record<string, Technology> = {
 
 export const projects: Project[] = [
   {
-    id: "e-commerce-platform",
-    title: "E-Commerce Platform",
+    id: "visa-website",
+    title: "Province Immigration",
     description:
       "A full-featured e-commerce platform with dynamic product listings, cart functionality, and secure checkout process.",
     thumbnailUrl:
