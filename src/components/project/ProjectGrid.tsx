@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import SectionHeading from "./SectionHeading";
-import { projects } from "../../pages/projects/project";
+import { projects } from "../../data/project";
 
 const ProjectGrid = () => {
   return (

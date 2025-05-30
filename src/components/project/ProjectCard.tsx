@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { Project } from "../../pages/projects/project";
+import { Project } from "../../data/project";
 import TechBadge from "./TechBadge";
 
 interface ProjectCardProps {

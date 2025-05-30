@@ -1,4 +1,4 @@
-import { Technology } from "../../pages/projects/project";
+import { Technology } from "../../data/project";
 
 
 interface TechBadgeProps {

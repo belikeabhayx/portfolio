@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import TechBadge from "@/components/project/TechBadge";
 import PageTransition from "@/components/project/PageTransition";
-import { projects } from "@/pages/projects/project";
+import { projects } from "@/data/project";
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import { routes } from "@/data/navigationRoutes";
