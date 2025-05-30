@@ -1,61 +1,140 @@
-import { ContactForm } from "@/components/ContactForm";
-import { GithubIcon, LinkedinIcon } from "@/components/Icons";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
-import { FaRegCopyright } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+const Footer = () => {
   return (
-    <footer className="flex w-full flex-col items-center gap-20 bg-transparent px-6 py-8 sm:px-14 md:px-20">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 rounded-2xl bg-teal-600 p-8 text-zinc-100 dark:bg-teal-500 sm:p-12 md:gap-12 lg:p-20">
-        <div className="text-center">
-          <span className="inline-block rounded-full bg-zinc-100 px-3 py-1 text-xs font-semibold uppercase text-tera-500 md:text-sm lg:text-base">
-            Get in touch
-          </span>
+    <footer className="border-t border-foreground/10 bg-background-subtle">
+      <div className="container py-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="mb-4 flex items-center space-x-2"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
+                <span className="text-lg font-semibold text-white">P</span>
+              </div>
+              <span className="text-lg font-semibold text-foreground">
+                Portfolio
+              </span>
+            </motion.div>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="max-w-md text-sm text-foreground-subtle"
+            >
+              Showcasing my journey through code and design. Every project tells
+              a story of problem-solving, creativity, and technical growth.
+            </motion.p>
+          </div>
+
+          <div>
+            <motion.h3
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="mb-4 font-semibold text-foreground"
+            >
+              Quick Links
+            </motion.h3>
+            <motion.ul
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="space-y-2"
+            >
+              <li>
+                <a
+                  href="/#about"
+                  className="text-sm text-foreground-subtle transition-colors hover:text-foreground"
+                >
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#projects"
+                  className="text-sm text-foreground-subtle transition-colors hover:text-foreground"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#contact"
+                  className="text-sm text-foreground-subtle transition-colors hover:text-foreground"
+                >
+                  Contact
+                </a>
+              </li>
+            </motion.ul>
+          </div>
+
+          <div>
+            <motion.h3
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="mb-4 font-semibold text-foreground"
+            >
+              Connect
+            </motion.h3>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="flex space-x-4"
+            >
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-subtle transition-colors hover:text-foreground"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-subtle transition-colors hover:text-foreground"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="mailto:your.email@example.com"
+                className="text-foreground-subtle transition-colors hover:text-foreground"
+                aria-label="Email"
+              >
+                <Mail size={20} />
+              </a>
+            </motion.div>
+          </div>
         </div>
-        <a
-          href={`mailto:${siteMetadata.email}`}
-          target="_blank"
-          className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-7xl"
+
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-8 border-t border-foreground/10 pt-8 text-center text-sm text-foreground-subtle"
         >
-          <span>chauhanabhay.chauhan2@</span>
-          <br />
-          <span>gmail.com</span>
-        </a>
-        <ContactForm />
-      </div>
-      <div className="flex w-full flex-col items-center justify-between gap-8 text-center  md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
-        <div className="flex items-center justify-center gap-2">
-          <FaRegCopyright className="text-teal-600 dark:text-teal-400" />
-          {currentYear} Abhay Chauhan
-        </div>
-        <div className="flex gap-8">
-          <a
-            href={siteMetadata.github}
-            target="_blank"
-            className="h-6 w-6"
-            aria-label="link to Github"
-          >
-            <GithubIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
-          {/* <a
-            href={siteMetadata.twitter}
-            target="_blank"
-            className="h-6 w-6"
-            aria-label="link to Twitter"
-          >
-            <TwitterIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a> */}
-          <a
-            href={siteMetadata.linkedin}
-            target="_blank"
-            className="h-6 w-6"
-            aria-label="link to Linkedin"
-          >
-            <LinkedinIcon className="text-teal-600 transition-colors duration-150 hover:text-tera-500 dark:text-teal-400 dark:hover:text-white" />
-          </a>
-        </div>
+          © {new Date().getFullYear()} Your Name. All rights reserved.
+        </motion.div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

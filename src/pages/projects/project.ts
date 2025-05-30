@@ -28,21 +28,32 @@ export const technologies: Record<string, Technology> = {
   firebase: { name: "Firebase", color: "#FFCA28" },
   graphql: { name: "GraphQL", color: "#E10098" },
   aws: { name: "AWS", color: "#FF9900" },
-  docker: { name: "Docker", color: "#2496ED" },
-  python: { name: "Python", color: "#3776AB" },
-  django: { name: "Django", color: "#092E20" },
-  vue: { name: "Vue.js", color: "#4FC08D" },
-  angular: { name: "Angular", color: "#DD0031" },
   redux: { name: "Redux", color: "#764ABC" },
-  svelte: { name: "Svelte", color: "#FF3E00" },
+  cms: { name: "Headless CMS", color: "#FF9900" },
+  python: { name: "Python", color: "#3776AB" },
+  postgresql: { name: "PostgreSQL", color: "#336791" },
+  mysql: { name: "MySQL", color: "#4479A1" },
+  reacthookform: { name: "React Hook Form", color: "#5A67D8" },
+  zod: { name: "Zod", color: "#3178C6" },
+  shadcnui: { name: "shadcn/ui", color: "#000000" },
+  drizzle: { name: "Drizzle", color: "#000000" },
+  framermotion: { name: "Framer Motion", color: "#FF61F6" },
+  storybook: { name: "Storybook", color: "#FF4785" },
+  nextauth: { name: "NextAuth.js", color: "#000000" },
+  trpc: { name: "tRPC", color: "#000000" },
+  reactquery: { name: "React Query", color: "#000000" },
+  reacttable: { name: "React Table", color: "#000000" },
+  zustand: { name: "Zustand", color: "#000000" },
+  tanstacktable: { name: "TanStack Table", color: "#000000" },
 };
 
 export const projects: Project[] = [
+  // visa-website
   {
     id: "visa-website",
     title: "Province Immigration",
     description:
-      "A full-featured e-commerce platform with dynamic product listings, cart functionality, and secure checkout process.",
+      "Province Immigration is a leading immigration consultancy based in Delhi, established in 2015. The organization specializes in providing comprehensive immigration services to individuals seeking to move abroad for career advancement, education, or permanent settlement. The consultancy has built a strong reputation for delivering professional guidance and support throughout the immigration process, helping clients achieve their international aspirations efficiently and transparently.",
     thumbnailUrl: "/projects/province/pro-im.png",
     images: [
       "/projects/province/pro-im.png",
@@ -50,34 +61,41 @@ export const projects: Project[] = [
       "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     technologies: [
+      technologies.next,
       technologies.react,
+      technologies.cms,
       technologies.node,
-      technologies.mongodb,
-      technologies.redux,
+      technologies.postgresql,
       technologies.tailwind,
+      technologies.reacthookform,
+      technologies.zod,
+      technologies.shadcnui,
+      technologies.typescript,
+      technologies.drizzle,
+      technologies.framermotion,
     ],
     features: [
-      "Responsive product catalog with filtering and sorting",
-      "User authentication and account management",
-      "Shopping cart with persistent storage",
-      "Secure checkout process with multiple payment options",
-      "Order history and tracking",
-      "Admin dashboard for inventory management",
+      "Responsive web design for seamless experience across devices",
+      "Custom consultation forms for eligibility assessment and onboarding",
+      "Content Management System (CMS) for easy updates and scalability",
+      "Service-oriented architecture for organized immigration pathways",
+      "SEO optimization for improved search engine visibility",
+      "Secure handling of client data with encrypted forms",
+      "Performance optimization for fast loading times",
+      "Integration with email marketing and CRM tools",
+      "Accessibility for users with disabilities",
     ],
-    overview: `This full-stack e-commerce platform was built to provide a seamless shopping experience.
-        The application features a responsive design, intuitive navigation, and fast performance
-        even with large product catalogs. The backend is built with Node.js and Express,
-        with MongoDB for data storage. User authentication is handled securely with JWT,
-        and the entire application follows best practices for web accessibility and SEO.`,
+    overview: `Province Immigration is a leading immigration consultancy based in Delhi, established in 2015. The organization specializes in providing comprehensive immigration services to individuals seeking to move abroad for career advancement, education, or permanent settlement. The consultancy has built a strong reputation for delivering professional guidance and support throughout the immigration process, helping clients achieve their international aspirations efficiently and transparently.`,
     role: "Full-stack Developer",
-    demoUrl: "https://example.com/demo",
-    repoUrl: "https://github.com/example/e-commerce",
+    demoUrl: "https://provinceimmigration.com",
+    repoUrl: "#",
   },
+  // accounting website
   {
     id: "accountingWebApp",
     title: "Accounting Web App",
     description:
-      "A collaborative task management application with real-time updates, team assignments, and progress tracking.",
+      "NRH Books appears to be a comprehensive business management platform designed to help businesses scale and manage their operations efficiently. The tagline Manage Your Business Effortlessly suggests it's an all-in-one solution for business administration and operations.",
     thumbnailUrl: "/projects/accounting/accounting-home.png",
     images: [
       "/projects/accounting/accounting-home.png",
@@ -87,8 +105,19 @@ export const projects: Project[] = [
     technologies: [
       technologies.next,
       technologies.typescript,
-      technologies.firebase,
+      technologies.trpc,
+      technologies.reactquery,
+      technologies.zustand,
+      technologies.shadcnui,
+      technologies.trpc,
+      technologies.tanstacktable,
+      technologies.postgresql,
       technologies.tailwind,
+      technologies.reacthookform,
+      technologies.zod,
+      technologies.framermotion,
+      technologies.drizzle,
+      technologies.nextauth,
     ],
     features: [
       "Kanban board with drag-and-drop interface",
@@ -98,21 +127,18 @@ export const projects: Project[] = [
       "Team management and user permissions",
       "Customizable workflows and views",
     ],
-    overview: `This task management application was designed to help teams collaborate more effectively.
-        Built with Next.js and TypeScript, it provides a robust foundation for complex state management.
-        Firebase was used for real-time database capabilities, enabling instant updates across all connected clients.
-        The UI was implemented with Tailwind CSS for a clean, responsive design that works across devices.`,
-    role: "Front-end Developer & UI Designer",
-    demoUrl: "https://example.com/task-demo",
-    repoUrl: "https://github.com/example/task-manager",
+    overview: `NRH Books appears to be a comprehensive business management platform designed to help businesses scale and manage their operations efficiently. The tagline "Manage Your Business Effortlessly" suggests it's an all-in-one solution for business administration and operations.`,
+    role: "Full-Stack Developer",
+    demoUrl: "https://nrhbooks.com",
+    repoUrl: "#",
   },
+  // borderly
   {
-    id: "ai-content-generator",
-    title: "AI Content Generator",
+    id: "borderly",
+    title: "NPM package 'Borderly'",
     description:
       "An AI-powered application that generates blog posts, marketing copy, and social media content based on user inputs.",
-    thumbnailUrl:
-      "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    thumbnailUrl: "/projects/borderly/borderly-home.png",
     images: [
       "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -140,13 +166,13 @@ export const projects: Project[] = [
     demoUrl: "https://example.com/ai-generator",
     repoUrl: "https://github.com/example/ai-content-gen",
   },
+  // xpert painting
   {
-    id: "mobile-fitness-app",
-    title: "Mobile Fitness App",
+    id: "xpertpainting",
+    title: "The Xpert Painting",
     description:
       "A comprehensive fitness tracking application with workout plans, progress monitoring, and nutritional guidance.",
-    thumbnailUrl:
-      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    thumbnailUrl: "/projects/xpert/xpert-home.png",
     images: [
       "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

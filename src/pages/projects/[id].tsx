@@ -8,8 +8,12 @@ import PageTransition from "@/components/project/PageTransition";
 import { projects } from "@/pages/projects/project";
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { routes } from "@/data/navigationRoutes";
+import Navbar from "@/layout/Navbar/Navbar";
+import { useTheme } from "next-themes";
 
 const ProjectDetail = () => {
+  const { theme } = useTheme();
   const router = useRouter();
   const { id } = router.query;
   const [activeImage, setActiveImage] = useState(0);
@@ -53,10 +57,11 @@ const ProjectDetail = () => {
         }}
       />
       <PageTransition>
-        <div className="pb-16">
+        <div className=" bg-black">
           {/* Hero Section */}
-          <div className="relative mb-12 h-[50vh] overflow-hidden md:h-[70vh]">
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-background via-transparent to-background"></div>
+          {theme === "dark" && <Navbar routes={routes} />}
+          <div className="relative mb-12 h-[50vh] overflow-hidden md:h-[65vh]">
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-background via-transparent to-background opacity-100"></div>
             <img
               src={project.images[activeImage]}
               alt={project.title}
@@ -67,7 +72,7 @@ const ProjectDetail = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-center text-4xl font-bold text-white md:text-5xl lg:text-6xl"
+                className="text-center  text-4xl font-bold text-white opacity-100 drop-shadow-lg md:text-6xl lg:text-7xl"
               >
                 {project.title}
               </motion.h1>
@@ -75,7 +80,7 @@ const ProjectDetail = () => {
             <div className="absolute bottom-8 left-0 right-0 z-20">
               <div className="container">
                 <Link
-                  href="/"
+                  href="/projects"
                   className="flex items-center text-zinc-800/80 transition-colors hover:text-zinc-900 dark:text-zinc-200/80 dark:hover:text-zinc-100"
                 >
                   <ArrowLeft size={16} className="mr-2" />
@@ -96,7 +101,7 @@ const ProjectDetail = () => {
                   className="mb-10"
                 >
                   <h2 className="mb-4 text-2xl font-bold">Project Overview</h2>
-                  <p className="whitespace-pre-line text-zinc-600 dark:text-zinc-400">
+                  <p className="whitespace-pre-line text-zinc-600 dark:text-zinc-300">
                     {project.overview}
                   </p>
                 </motion.div>
@@ -112,7 +117,7 @@ const ProjectDetail = () => {
                     {project.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <span className="mr-2 text-primary">▹</span>
-                        <span className="text-zinc-600 dark:text-zinc-400">
+                        <span className="text-zinc-300 dark:text-zinc-300">
                           {feature}
                         </span>
                       </li>
@@ -159,7 +164,7 @@ const ProjectDetail = () => {
                   <h3 className="mb-4 text-xl font-bold">Project Details</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="mb-1 text-sm text-zinc-500 dark:text-zinc-400">
+                      <h4 className="mb-1 text-sm text-zinc-500 dark:text-zinc-300">
                         My Role
                       </h4>
                       <p className="text-zinc-900 dark:text-zinc-100">
@@ -167,7 +172,7 @@ const ProjectDetail = () => {
                       </p>
                     </div>
                     <div>
-                      <h4 className="mb-2 text-sm text-zinc-500 dark:text-zinc-400">
+                      <h4 className="mb-2 text-sm text-zinc-500 dark:text-zinc-300">
                         Tech Stack
                       </h4>
                       <div className="flex flex-wrap gap-2">

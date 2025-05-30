@@ -7,6 +7,7 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 import DarkHero from "@/components/DarkHero/DarkHero";
 import { useTheme } from "next-themes";
 import ProjectGrid from "@/components/project/ProjectGrid";
+import Contact from "@/components/contact";
 
 
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
@@ -50,6 +51,7 @@ export default function Home() {
       <Skills />
       {/* <Project projects={PROJECT_SHOWCASE} /> */}
       <ProjectGrid />
+      <Contact/>
     </>
   );
 }
