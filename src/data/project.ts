@@ -19,32 +19,27 @@ export type Project = {
 
 export const technologies: Record<string, Technology> = {
   react: { name: "React", color: "#61DAFB" },
-  next: { name: "Next.js", color: "#000000" },
+  next: { name: "Next.js", color: "#8E44AD" }, // Purple-ish
   typescript: { name: "TypeScript", color: "#3178C6" },
   tailwind: { name: "Tailwind CSS", color: "#06B6D4" },
   node: { name: "Node.js", color: "#339933" },
-  express: { name: "Express", color: "#000000" },
+  express: { name: "Express", color: "#E67E22" }, // Orange
   mongodb: { name: "MongoDB", color: "#47A248" },
-  firebase: { name: "Firebase", color: "#FFCA28" },
-  graphql: { name: "GraphQL", color: "#E10098" },
-  aws: { name: "AWS", color: "#FF9900" },
-  redux: { name: "Redux", color: "#764ABC" },
   cms: { name: "Headless CMS", color: "#FF9900" },
-  python: { name: "Python", color: "#3776AB" },
   postgresql: { name: "PostgreSQL", color: "#336791" },
-  mysql: { name: "MySQL", color: "#4479A1" },
   reacthookform: { name: "React Hook Form", color: "#5A67D8" },
-  zod: { name: "Zod", color: "#3178C6" },
-  shadcnui: { name: "shadcn/ui", color: "#000000" },
-  drizzle: { name: "Drizzle", color: "#000000" },
+  zod: { name: "Zod", color: "#0A9396" }, // Teal
+  shadcnui: { name: "shadcn/ui", color: "#FF7F50" }, // Coral
+  drizzle: { name: "Drizzle", color: "#9B59B6" }, // Purple
   framermotion: { name: "Framer Motion", color: "#FF61F6" },
-  storybook: { name: "Storybook", color: "#FF4785" },
-  nextauth: { name: "NextAuth.js", color: "#000000" },
-  trpc: { name: "tRPC", color: "#000000" },
-  reactquery: { name: "React Query", color: "#000000" },
-  reacttable: { name: "React Table", color: "#000000" },
-  zustand: { name: "Zustand", color: "#000000" },
-  tanstacktable: { name: "TanStack Table", color: "#000000" },
+  nextauth: { name: "NextAuth.js", color: "#F39C12" }, // Golden
+  trpc: { name: "tRPC", color: "#16A34A" }, // Green
+  reactquery: { name: "React Query", color: "#E11D48" }, // Red
+  zustand: { name: "Zustand", color: "#F97316" }, // Orange
+  tanstacktable: { name: "TanStack Table", color: "#3B82F6" }, // Blue
+  python: { name: "Python", color: "#3776AB" }, // Python Blue
+  aws: { name: "AWS", color: "#FF9900" }, // AWS Orange
+  rollup: { name: "Rollup", color: "#FF5733" }, // Red-Orange
 };
 
 export const projects: Project[] = [
@@ -64,7 +59,6 @@ export const projects: Project[] = [
       technologies.next,
       technologies.react,
       technologies.cms,
-      technologies.node,
       technologies.postgresql,
       technologies.tailwind,
       technologies.reacthookform,
@@ -109,7 +103,6 @@ export const projects: Project[] = [
       technologies.reactquery,
       technologies.zustand,
       technologies.shadcnui,
-      technologies.trpc,
       technologies.tanstacktable,
       technologies.postgresql,
       technologies.tailwind,
@@ -146,9 +139,9 @@ export const projects: Project[] = [
     ],
     technologies: [
       technologies.react,
-      technologies.python,
-      technologies.aws,
+      technologies.typescript,
       technologies.tailwind,
+      technologies.rollup,
     ],
     features: [
       "Content generation for multiple formats (blog, social, email)",
@@ -171,7 +164,7 @@ export const projects: Project[] = [
     id: "xpertpainting",
     title: "The Xpert Painting",
     description:
-      "A comprehensive fitness tracking application with workout plans, progress monitoring, and nutritional guidance.",
+      "The Xpert Painting is a professional painting service provider, specializing in residential and commercial painting projects. The company emphasizes a customer-centric approach, delivering quality workmanship and ensuring client satisfaction throughout the painting process. Their services are available in locations such as Agra, and they are recognized for their reliability, efficiency, and attention to detail.",
     thumbnailUrl: "/projects/xpert/xpert-home.png",
     images: [
       "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -180,24 +173,88 @@ export const projects: Project[] = [
     ],
     technologies: [
       technologies.react,
-      technologies.redux,
-      technologies.firebase,
-      technologies.node,
+      technologies.typescript,
+      technologies.tailwind,
+      technologies.shadcnui,
     ],
     features: [
-      "Customizable workout plans and exercise library",
-      "Progress tracking with visual charts and metrics",
-      "Nutritional planning and meal suggestions",
-      "Activity and workout history",
-      "Goal setting and achievement rewards",
-      "Social sharing and community challenges",
+      "Customizable workout plans with dynamic exercise library integration using RESTful APIs and responsive UI components",
+      "Progress tracking implemented with interactive data visualizations using charting libraries like D3.js or Chart.js for real-time analytics",
+      "Nutritional planning module featuring algorithm-driven meal suggestions and macro tracking with database-backed user profiles",
+      "Activity and workout history stored securely in cloud databases with efficient querying and offline synchronization support",
+      "Goal setting system with real-time achievement tracking and gamification elements using push notifications and badge rewards",
+      "Social sharing and community challenges integrated via social media APIs and real-time messaging frameworks for enhanced user engagement",
     ],
-    overview: `This mobile fitness application was designed to help users maintain consistency in their fitness journey.
-        The app provides personalized workout plans, detailed progress tracking, and nutritional guidance.
-        React Native was used to develop a cross-platform solution that works seamlessly on both iOS and Android devices.
-        The backend leverages Firebase for authentication and real-time data synchronization.`,
-    role: "Mobile App Developer",
-    demoUrl: "https://example.com/fitness-app",
-    repoUrl: "https://github.com/example/fitness-app",
+    overview: `The Xpert Painting is a professional painting service provider, specializing in residential and commercial painting projects. The company emphasizes a customer-centric approach, delivering quality workmanship and ensuring client satisfaction throughout the painting process. Their services are available in locations such as Agra, and they are recognized for their reliability, efficiency, and attention to detail.`,
+    role: "Frontend Developer",
+    demoUrl: "https://www.thexpertpainting.com",
+    repoUrl: "#",
+  },
+  // glamourytouch
+  {
+    id: "glamourytouch",
+    title: "Glamoury Touch",
+    description:
+      "Glamoury Touch is a professional cleaning service provider offering a range of residential and commercial cleaning solutions. The website serves as a digital platform for customers to explore services, book appointments, and manage their interactions seamlessly. The frontend is designed for optimal user experience, ensuring accessibility, responsiveness, and interactive engagement throughout the booking and service management process.",
+    thumbnailUrl: "/projects/glamoury/makeup.webp",
+    images: [
+      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    technologies: [
+      technologies.react,
+      technologies.typescript,
+      technologies.tailwind,
+      technologies.shadcnui,
+    ],
+    features: [
+      "Intuitive online appointment booking interface built with React, featuring real-time calendar integration and form validation for seamless scheduling",
+      "Dynamic, filterable service catalog implemented with state management (e.g., Redux or Context API) for responsive browsing of cleaning packages",
+      "Responsive design using CSS frameworks (e.g., Tailwind CSS or Bootstrap) to ensure optimal viewing across all devices and screen sizes",
+      "Secure client login and dashboard with JWT-based authentication and protected routes for personalized user experiences",
+      "Interactive service tracking and feedback forms using AJAX/Fetch API for real-time updates without page reloads",
+      "Integrated payment and invoicing UI with third-party payment gateway SDKs for smooth and secure transactions",
+      "Automated notifications and reminders via modals, toasts, and email/SMS triggers to enhance user engagement and retention",
+    ],
+    overview: `Glamoury Touch is a professional cleaning service provider offering a range of residential and commercial cleaning solutions. The website serves as a digital platform for customers to explore services, book appointments, and manage their interactions seamlessly. The frontend is designed for optimal user experience, ensuring accessibility, responsiveness, and interactive engagement throughout the booking and service management process.`,
+    role: "Frontend Developer",
+    demoUrl: "https://www.glamourytouch.com",
+    repoUrl: "#",
+  },
+  // A-star Tours
+  {
+    id: "samedaytajtour",
+    title: "A-star Tours",
+    description:
+      "A-star Tours is a travel booking platform specializing in curated, single-day excursions from Delhi to Agra, with a focus on the Taj Mahal and Agra Fort. The website provides users with detailed tour information, seamless booking options, and an engaging presentation of travel packages. The frontend is designed to deliver a responsive, visually appealing, and intuitive user experience, catering to both domestic and international travelers seeking efficient and memorable day trips.",
+    thumbnailUrl: "/projects/taj/travel.webp",
+    images: [
+      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    technologies: [
+      technologies.next,
+      technologies.react,
+      technologies.typescript,
+      technologies.tailwind,
+      technologies.shadcnui,
+      technologies.framermotion,
+    ],
+    features: [
+      "Responsive and mobile-first UI built with modern CSS frameworks (e.g., Tailwind CSS, Bootstrap) to ensure optimal experience across devices",
+      "Interactive tour package listing with dynamic filtering and sorting, implemented using React state management or vanilla JavaScript",
+      "Integrated booking form with real-time validation and user feedback, leveraging controlled components and form libraries",
+      "Engaging image galleries and sliders for destinations, utilizing libraries like Swiper.js or lightGallery.js for smooth visual presentation",
+      "Client testimonial and review section with dynamic rendering from backend APIs to build trust and social proof",
+      "Comprehensive service information pages with modular components for easy content updates and scalability",
+      "Call-to-action buttons and sticky navigation for improved user flow and higher conversion rates",
+      "Accessibility best practices, including semantic HTML, ARIA labels, and keyboard navigation support for inclusive design",
+    ],
+    overview: `The Xpert Painting is a professional painting service provider, specializing in residential and commercial painting projects. The company emphasizes a customer-centric approach, delivering quality workmanship and ensuring client satisfaction throughout the painting process. Their services are available in locations such as Agra, and they are recognized for their reliability, efficiency, and attention to detail.`,
+    role: "Frontend Developer",
+    demoUrl: "https://www.samedaytajtour.com",
+    repoUrl: "#",
   },
 ];
