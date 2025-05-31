@@ -1,4 +1,4 @@
-# KD Portfolio
+# Abhay Chauhan Portfolio
 
 This portfolio is built using [Next.js](https://nextjs.org/).
 

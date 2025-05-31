@@ -57,7 +57,7 @@ const ProjectDetail = () => {
         }}
       />
       <PageTransition>
-        <div className=" bg-black">
+        <div className="bg-black">
           {/* Hero Section */}
           {theme === "dark" && <Navbar routes={routes} />}
           <div className="relative mb-12 h-[50vh] overflow-hidden md:h-[65vh]">
@@ -72,7 +72,7 @@ const ProjectDetail = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-center  text-4xl font-bold text-white opacity-100 drop-shadow-lg md:text-6xl lg:text-7xl"
+                className="text-center text-4xl font-bold text-white opacity-100 drop-shadow-lg md:text-6xl lg:text-7xl"
               >
                 {project.title}
               </motion.h1>
@@ -188,7 +188,7 @@ const ProjectDetail = () => {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="space-y-4"
+                  className="space-y-4 mb-10 md:mb-0"
                 >
                   {project.demoUrl && (
                     <a
