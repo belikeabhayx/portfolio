@@ -51,9 +51,9 @@ export const projects: Project[] = [
       "Province Immigration is a leading immigration consultancy based in Delhi, established in 2015. The organization specializes in providing comprehensive immigration services to individuals seeking to move abroad for career advancement, education, or permanent settlement. The consultancy has built a strong reputation for delivering professional guidance and support throughout the immigration process, helping clients achieve their international aspirations efficiently and transparently.",
     thumbnailUrl: "/projects/province/pro-im.png",
     images: [
-      "/projects/province/pro-im.png",
-      "https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/projects/province/visa.jpg",
+      // "https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      // "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     technologies: [
       technologies.next,
@@ -93,8 +93,8 @@ export const projects: Project[] = [
     thumbnailUrl: "/projects/accounting/accounting-home.png",
     images: [
       "/projects/accounting/accounting-home.png",
-      "https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      // "https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      // "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     technologies: [
       technologies.next,
@@ -167,9 +167,9 @@ export const projects: Project[] = [
       "The Xpert Painting is a professional painting service provider, specializing in residential and commercial painting projects. The company emphasizes a customer-centric approach, delivering quality workmanship and ensuring client satisfaction throughout the painting process. Their services are available in locations such as Agra, and they are recognized for their reliability, efficiency, and attention to detail.",
     thumbnailUrl: "/projects/xpert/xpert-home.png",
     images: [
-      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/projects/xpert/paint.jpg",
+      // "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      // "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
     technologies: [
       technologies.react,
@@ -197,11 +197,7 @@ export const projects: Project[] = [
     description:
       "Glamoury Touch is a professional cleaning service provider offering a range of residential and commercial cleaning solutions. The website serves as a digital platform for customers to explore services, book appointments, and manage their interactions seamlessly. The frontend is designed for optimal user experience, ensuring accessibility, responsiveness, and interactive engagement throughout the booking and service management process.",
     thumbnailUrl: "/projects/glamoury/makeup.webp",
-    images: [
-      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    ],
+    images: ["/projects/glamoury/make.jpg"],
     technologies: [
       technologies.react,
       technologies.typescript,
@@ -229,11 +225,7 @@ export const projects: Project[] = [
     description:
       "A-star Tours is a travel booking platform specializing in curated, single-day excursions from Delhi to Agra, with a focus on the Taj Mahal and Agra Fort. The website provides users with detailed tour information, seamless booking options, and an engaging presentation of travel packages. The frontend is designed to deliver a responsive, visually appealing, and intuitive user experience, catering to both domestic and international travelers seeking efficient and memorable day trips.",
     thumbnailUrl: "/projects/taj/travel.webp",
-    images: [
-      "https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    ],
+    images: ["/projects/taj/travel.jpeg"],
     technologies: [
       technologies.next,
       technologies.react,
