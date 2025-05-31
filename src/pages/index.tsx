@@ -2,19 +2,14 @@ import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
 import CursorTrailCanvas from "@/components/CursorTrailCanvas";
 import Hero from "@/components/Hero";
-import { PROJECT_SHOWCASE } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import DarkHero from "@/components/DarkHero/DarkHero";
 import { useTheme } from "next-themes";
 import ProjectGrid from "@/components/project/ProjectGrid";
-import Contact from "@/components/contact";
 import GetInTouch from "@/components/getInTouch/getInTouch";
 import { motion } from "framer-motion";
 
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
-const Project = dynamic(() => import("@/components/ProjectShowcase"), {
-  ssr: true,
-});
 
 export default function Home() {
   const { theme } = useTheme();

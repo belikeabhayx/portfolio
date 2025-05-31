@@ -1,6 +1,4 @@
 import { NextSeo } from "next-seo";
-import ProjectCard from "@/components/ProjectCard";
-import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import { useTheme } from "next-themes";
 import { routes } from "@/data/navigationRoutes";
