@@ -131,7 +131,7 @@ const ProjectDetail = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <h2 className="mb-4 text-2xl font-bold">Image Gallery</h2>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-4 mb-10">
                     {project.images.map((image, index) => (
                       <div
                         key={index}

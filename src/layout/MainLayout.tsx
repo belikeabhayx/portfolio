@@ -32,7 +32,7 @@ export default function MainLayout(props: MainLayoutProps) {
           {props.children}
         </main>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

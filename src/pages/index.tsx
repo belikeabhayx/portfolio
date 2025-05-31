@@ -8,7 +8,8 @@ import DarkHero from "@/components/DarkHero/DarkHero";
 import { useTheme } from "next-themes";
 import ProjectGrid from "@/components/project/ProjectGrid";
 import Contact from "@/components/contact";
-
+import GetInTouch from "@/components/getInTouch/getInTouch";
+import { motion } from "framer-motion";
 
 const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
 const Project = dynamic(() => import("@/components/ProjectShowcase"), {
@@ -49,9 +50,22 @@ export default function Home() {
       />
       {theme === "dark" ? <DarkHero /> : <Hero />}
       <Skills />
-      {/* <Project projects={PROJECT_SHOWCASE} /> */}
       <ProjectGrid />
-      <Contact/>
+      {/* <Contact/> */}
+      <GetInTouch />
+      <footer className="border-t border-foreground/10 bg-background-subtle">
+        <div className="container py-6">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-8 border-t border-foreground/10 pt-8 text-center text-sm text-foreground-subtle"
+          >
+            © {new Date().getFullYear()} ABHAY CHAUHAN. All rights reserved.
+          </motion.div>
+        </div>
+      </footer>
     </>
   );
 }
