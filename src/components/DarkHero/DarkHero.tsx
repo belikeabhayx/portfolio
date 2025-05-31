@@ -29,7 +29,7 @@ const DarkHero = () => {
 
       <Navbar routes={routes} />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col justify-between px-2 py-12 sm:px-4 lg:px-8">
+      <div className="relative mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl flex-col justify-between px-2 py-12 sm:px-4 lg:px-8">
         {/* Main headline with enhanced typography */}
         <div className="relative mt-8 max-w-3xl sm:mt-12">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
