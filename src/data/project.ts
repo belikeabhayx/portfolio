@@ -130,7 +130,7 @@ export const projects: Project[] = [
     id: "borderly",
     title: "NPM package 'Borderly'",
     description:
-      "An AI-powered application that generates blog posts, marketing copy, and social media content based on user inputs.",
+      "A lightweight React component that helps you visualize and debug your layout by adding outlines to all elements on your page with a single click.",
     thumbnailUrl: "/projects/borderly/borderly-home.png",
     images: [
       "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -156,7 +156,7 @@ export const projects: Project[] = [
         while the Python backend handles API interactions with various AI services. AWS Lambda functions
         process content generation requests, optimizing for both speed and cost-effectiveness.`,
     role: "Full-stack Developer & AI Integration Specialist",
-    demoUrl: "https://example.com/ai-generator",
+    demoUrl: "https://www.npmjs.com/package/borderly",
     repoUrl: "https://github.com/example/ai-content-gen",
   },
   // xpert painting
